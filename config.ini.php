@@ -15,7 +15,7 @@ schema = <?php $_ENV['SCHEMA']; ?>
 [General]
 salt = <?php $_ENV['SECRET_TOKEN']; ?>
 session_save_handler = dbtable
-force_ssl = 1
+force_ssl = <?php $_ENV['SSL']; ?>
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
