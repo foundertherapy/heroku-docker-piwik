@@ -28,8 +28,7 @@
         "ext-apcu": "*"
     },
     "require-dev": {
-        "heroku/heroku-buildpack-php": "*",
-        "vendor/autoload.php": "*"
+        "heroku/heroku-buildpack-php": "*"
     },
     "scripts": {
         "compile": "bash setup-config.sh"
