@@ -30,8 +30,6 @@
       "require-dev": {
     "heroku/heroku-buildpack-php": "*"},
     "scripts": {
-        "compile": [
-            "cp img.php vendor/piwik/piwik/img.php"
-        ]
+        "compile": "bash setup-config.sh"
     }
 }
