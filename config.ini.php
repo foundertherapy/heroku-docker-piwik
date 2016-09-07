@@ -16,7 +16,7 @@ schema = Mysql
 salt = #SECRET_TOKEN
 session_save_handler = dbtable
 force_ssl = 1
-trusted_hosts[] = "analytics.organize.org"
+trusted_hosts[] = #DOMAIN
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
