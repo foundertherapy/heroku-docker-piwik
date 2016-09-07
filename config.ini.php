@@ -7,10 +7,10 @@ password = <?php $_ENV['DB_PASSWORD']; ?>
 dbname = <?php $_ENV['DB_NAME']; ?>
 tables_prefix = <?php $_ENV['DB_PREFIX']; ?>
 port = <?php $_ENV['DB_PORT']; ?>
-charset = <?php $_ENV['CHARSET']; ?>
-adapter = <?php $_ENV['ADAPTER']; ?>
-type = <?php $_ENV['TYPE']; ?>
-schema = <?php $_ENV['SCHEMA']; ?>
+charset = "utf8"
+adapter = PDO\MYSQL
+type = InnoDB
+schema = Mysql
 
 [General]
 salt = <?php $_ENV['SECRET_TOKEN']; ?>
