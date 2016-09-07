@@ -8,9 +8,13 @@ dbname = <?php $_ENV['DB_NAME']; ?>
 tables_prefix = <?php $_ENV['DB_PREFIX']; ?>
 port = <?php $_ENV['DB__PORT']; ?>
 charset = "utf8"
+adapter = PDO\MYSQL
+type = ClearDB
+schema = Mysql
 
 [General]
 salt = "#SECRET_TOKEN"
+force_ssl = 1
 session_save_handler = dbtable
 
 [PluginsInstalled]
