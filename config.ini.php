@@ -1,19 +1,19 @@
 ; <?php exit; ?> DO NOT REMOVE THIS LINE
 ; file automatically generated or modified by Piwik; you can manually override the default values in global.ini.php by redefining them in this file.
 [database]
-host = <?php $_ENV['DB_HOST']; ?>
-username = <?php $_ENV['DB_USERNAME']; ?>
-password = <?php $_ENV['DB_PASSWORD']; ?>
-dbname = <?php $_ENV['DB_NAME']; ?>
-tables_prefix = <?php $_ENV['DB_PREFIX']; ?>
-port = <?php $_ENV['DB_PORT']; ?>
+host = #DB_HOST
+username = #DB_USERNAME
+password = #DB_PASSWORD
+dbname = #DB_NAME
+tables_prefix = #DB_PREFIX
+port = #DB_PORT
 charset = "utf8"
 adapter = PDO\MYSQL
 type = InnoDB
 schema = Mysql
 
 [General]
-salt = <?php $_ENV['SECRET_TOKEN']; ?>
+salt = #SECRET_TOKEN
 session_save_handler = dbtable
 force_ssl = 1
 
