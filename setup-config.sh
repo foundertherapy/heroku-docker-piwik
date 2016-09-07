@@ -20,5 +20,5 @@ sed -i s/#DB_PREFIX/$DB_PREFIX/ vendor/piwik/piwik/config/config.ini.php
 sed -i s/#SECRET_TOKEN/$SECRET_TOKEN/ vendor/piwik/piwik/config/config.ini.php
 sed -i s/#DOMAIN/$DOMAIN/ vendor/piwik/piwik/config/config.ini.php
 
-composer require symfony/finder
+composer require symfony/console
 ./console plugin:activate CustomDimensions
