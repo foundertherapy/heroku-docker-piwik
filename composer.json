@@ -27,8 +27,10 @@
         "ext-gd": "*",
         "ext-apcu": "*"
     },
-      "require-dev": {
-    "heroku/heroku-buildpack-php": "*"},
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*",
+        "symfony/console": "*"
+    },
     "scripts": {
         "compile": "bash setup-config.sh"
     }
