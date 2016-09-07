@@ -7,15 +7,15 @@ password = <?php $_ENV['DB_PASSWORD']; ?>
 dbname = <?php $_ENV['DB_NAME']; ?>
 tables_prefix = <?php $_ENV['DB_PREFIX']; ?>
 port = <?php $_ENV['DB__PORT']; ?>
-charset = "utf8"
-adapter = "PDO\MYSQL"
-type = "ClearDB"
-schema = "Mysql"
+charset = <?php $_ENV['CHARSET']; ?>
+adapter = <?php $_ENV['ADAPTER']; ?>
+type = <?php $_ENV['TYPE']; ?>
+schema = <?php $_ENV['SCHEMA']; ?>
 
 [General]
-salt = "#SECRET_TOKEN"
-force_ssl = 1
+salt = <?php $_ENV['SECRET_TOKEN']; ?>
 session_save_handler = dbtable
+force_ssl = 1
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
