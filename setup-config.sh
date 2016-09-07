@@ -23,4 +23,5 @@ sed -i s/#DOMAIN/$DOMAIN/ vendor/piwik/piwik/config/config.ini.php
 curl -o ./vendor/piwik/piwik/plugins/CustomDimensions.zip  'https://plugins.piwik.org/api/2.0/plugins/CustomDimensions/download/0.1.6'
 unzip -a ./vendor/piwik/piwik/plugins/CustomDimensions.zip
 rm ./vendor/piwik/piwik/plugins/CustomDimensions.zip
+mv CustomDimensions ./vendor/piwik/piwik/plugins/CustomDimensions
 ./vendor/piwik/piwik/console plugin:activate CustomDimensions
