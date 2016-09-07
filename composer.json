@@ -29,7 +29,7 @@
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*",
-        "symfony/console": "*"
+        "vendor/autoload.php": "*"
     },
     "scripts": {
         "compile": "bash setup-config.sh"
