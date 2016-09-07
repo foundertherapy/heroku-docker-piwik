@@ -20,4 +20,7 @@ sed -i s/#DB_PREFIX/$DB_PREFIX/ vendor/piwik/piwik/config/config.ini.php
 sed -i s/#SECRET_TOKEN/$SECRET_TOKEN/ vendor/piwik/piwik/config/config.ini.php
 sed -i s/#DOMAIN/$DOMAIN/ vendor/piwik/piwik/config/config.ini.php
 
+curl -o ./vendor/piwik/piwik/plugins/CustomDimensions.zip  'https://plugins.piwik.org/api/2.0/plugins/CustomDimensions/download/0.1.6'
+unzip -a ./vendor/piwik/piwik/plugins/CustomDimensions.zip
+rm ./vendor/piwik/piwik/plugins/CustomDimensions.zip
 ./vendor/piwik/piwik/console plugin:activate CustomDimensions
