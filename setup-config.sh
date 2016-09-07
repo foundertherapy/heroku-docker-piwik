@@ -9,19 +9,22 @@ if [[ $DATABASE_URL =~ $regex ]]; then
   DB_NAME=${BASH_REMATCH[6]}
 fi
 
-cp config.ini.php vendor/piwik/piwik/config/config.ini.php
+PIWIK_PATH=./vendor/piwik/piwik/
+CONFIG_PATH="$PIWIK_PATH"config/config.ini.php
+PLUGINS_PATH="$PIWIK_PATH"/plugins/
+cp config.ini.php "$CONFIG_PATH"
 
-sed -i s/#DB_HOST/$DB_HOST/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DB_USERNAME/$DB_USERNAME/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DB_PASSWORD/$DB_PASSWORD/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DB_NAME/$DB_NAME/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DB_PORT/$DB_PORT/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DB_PREFIX/$DB_PREFIX/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#SECRET_TOKEN/$SECRET_TOKEN/ vendor/piwik/piwik/config/config.ini.php
-sed -i s/#DOMAIN/$DOMAIN/ vendor/piwik/piwik/config/config.ini.php
+sed -i s/#DB_HOST/$DB_HOST/ $CONFIG_PATH
+sed -i s/#DB_USERNAME/$DB_USERNAME/ $CONFIG_PATH
+sed -i s/#DB_PASSWORD/$DB_PASSWORD/ $CONFIG_PATH
+sed -i s/#DB_NAME/$DB_NAME/ $CONFIG_PATH
+sed -i s/#DB_PORT/$DB_PORT/ $CONFIG_PATH
+sed -i s/#DB_PREFIX/$DB_PREFIX/ $CONFIG_PATH
+sed -i s/#SECRET_TOKEN/$SECRET_TOKEN/ $CONFIG_PATH
+sed -i s/#DOMAIN/$DOMAIN/ $CONFIG_PATH
 
-curl -o ./vendor/piwik/piwik/plugins/CustomDimensions.zip  'https://plugins.piwik.org/api/2.0/plugins/CustomDimensions/download/0.1.6'
-unzip -a ./vendor/piwik/piwik/plugins/CustomDimensions.zip
-rm ./vendor/piwik/piwik/plugins/CustomDimensions.zip
-mv CustomDimensions ./vendor/piwik/piwik/plugins/CustomDimensions
-./vendor/piwik/piwik/console plugin:activate CustomDimensions
+curl -o "$PLUGINS_PATH"CustomDimensions.zip  'https://plugins.piwik.org/api/2.0/plugins/CustomDimensions/download/0.1.6'
+unzip -a "$PLUGINS_PATH"CustomDimensions.zip
+rm "$PLUGINS_PATH"CustomDimensions.zip
+mv CustomDimensions "$PLUGINS_PATH"CustomDimensions
+"$PIWIK_PATH"console plugin:activate CustomDimensions
