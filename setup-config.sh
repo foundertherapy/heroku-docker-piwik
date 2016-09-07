@@ -12,6 +12,7 @@ fi
 PIWIK_PATH=./vendor/piwik/piwik/
 CONFIG_PATH="$PIWIK_PATH"config/config.ini.php
 PLUGINS_PATH="$PIWIK_PATH"/plugins/
+
 cp config.ini.php "$CONFIG_PATH"
 
 sed -i s/#DB_HOST/$DB_HOST/ $CONFIG_PATH
