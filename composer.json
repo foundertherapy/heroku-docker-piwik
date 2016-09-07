@@ -25,7 +25,8 @@
         "piwik": "*",
         "ext-mbstring": "*",
         "ext-gd": "*",
-        "ext-apcu": "*"
+        "ext-apcu": "*",
+        "symfony/finder": "*"
     },
       "require-dev": {
     "heroku/heroku-buildpack-php": "*"},
