@@ -14,6 +14,7 @@ schema = Mysql
 
 [General]
 salt = #SECRET_TOKEN
+installation_in_progress = true
 trusted_hosts[] = #DOMAIN
 
 
