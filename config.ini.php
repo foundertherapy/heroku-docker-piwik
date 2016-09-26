@@ -16,6 +16,7 @@ schema = Mysql
 salt = #SECRET_TOKEN
 trusted_hosts[] = #DOMAIN
 
+
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
 PluginsInstalled[] = "Login"
