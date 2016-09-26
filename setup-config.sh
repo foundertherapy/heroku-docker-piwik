@@ -24,3 +24,9 @@ sed -i s/#DB_PORT/$DB_PORT/ $CONFIG_PATH
 sed -i s/#DB_PREFIX/$DB_PREFIX/ $CONFIG_PATH
 sed -i s/#SECRET_TOKEN/$SECRET_TOKEN/ $CONFIG_PATH
 sed -i s/#DOMAIN/$DOMAIN/ $CONFIG_PATH
+
+curl -o "$PLUGINS_PATH"CustomDimensions.zip  'https://plugins.piwik.org/api/2.0/plugins/CustomDimensions/download/0.1.6'
+unzip -a "$PLUGINS_PATH"CustomDimensions.zip
+rm "$PLUGINS_PATH"CustomDimensions.zip
+mv CustomDimensions "$PLUGINS_PATH"CustomDimensions
+"$PIWIK_PATH"console plugin:activate CustomDimensions

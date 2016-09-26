@@ -14,9 +14,8 @@ schema = Mysql
 
 [General]
 salt = #SECRET_TOKEN
-installation_in_progress = true
+session_save_handler = dbtable
 trusted_hosts[] = #DOMAIN
-
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
