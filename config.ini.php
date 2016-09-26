@@ -17,6 +17,7 @@ salt = #SECRET_TOKEN
 force_ssl = 1
 trusted_hosts[] = #DOMAIN
 
+
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
 PluginsInstalled[] = "Login"
