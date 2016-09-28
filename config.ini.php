@@ -14,7 +14,7 @@ schema = Mysql
 
 [General]
 salt = #SECRET_TOKEN
-enable_ssl = 1
+force_ssl = 1
 session_save_handler = dbtable
 trusted_hosts[] = #DOMAIN
 
